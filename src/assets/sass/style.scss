@@ -2,3 +2,32 @@
 @import 'global/reset';
 @import 'global/reset';
 @import 'components/heading';
+@import 'media/converter_wrapper_media';
+
+main{
+    border-radius: 20px;
+    background-color: #393939;
+    color: #f5f5f5;
+    #converter_wrapper{
+        select {
+            padding: 10px;
+            outline: 0;
+            color: #f5f5f5;
+            background-color: #606060;
+        }
+        input{
+            outline: 0;
+        }
+    }
+}
+#copyright{
+    > span , a{
+        color:#f983e6 ;
+    }
+    a{
+        transition: color .5s ease;
+        &:hover{
+            color: #FCAA8A;
+        }
+    }
+}

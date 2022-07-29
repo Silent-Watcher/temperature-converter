@@ -13,7 +13,35 @@
   <div class="container-fluid"> 
     <div class="container"> 
       <div class="row"> 
-        <h1 class="text-center">converter <span id="base_unit">℃</span> to<span id="result_unit">℉</span></h1>
+        <h1 class="user-select-none text-center">converter <span id="base_unit">℃</span> to<span id="result_unit">℉</span></h1>
+      </div>
+      <div class="row"> 
+        <main class="mt-4 p-3 col-10 offset-1 col-md-10 offset-md-1 d-flex justify-content-center align-items-center flex-column">
+          <div class="row">
+            <div class="d-flex flex-column flex-md-row justify-content-center align-items-center fs-3 pt-5" id="converter_wrapper">
+              <section class="mx-4 d-flex flex-column"> 
+                <input class="text-center" id="base_unit_input" type="text" placeholder="℃">
+                <select class="fs-4" id="base_unit_selection">
+                  <option value="Celsius">Celsius</option>
+                  <option value="Fahrenheit">Fahrenheit</option>
+                </select>
+              </section>
+              <p class="d-flex align-items-center justify-content-center"> <i class="fa-solid fa-equals"></i></p>
+              <section class="mx-4 d-flex flex-column">
+                <input class="text-center" id="result_unit_input" type="text" placeholder="℉">
+                <select class="fs-4" id="result_unit_selection">
+                  <option value="Fahrenheit">Fahrenheit</option>
+                  <option value="Celsius">Celsius</option>
+                </select>
+              </section>
+            </div>
+          </div>
+          <div class="row"> 
+            <footer class="mt-5 user-select-none" id="copyright">Made with <span>❤ </span>by <a class="text-decoration-none" href="https://github.com/Silent-Watcher" target="_blank">silentWatcher</a>
+              <time>2022</time> ©
+            </footer>
+          </div>
+        </main>
       </div>
     </div>
   </div>
