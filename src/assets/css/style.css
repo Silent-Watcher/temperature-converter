@@ -1,26 +1,32 @@
 body {
   font-family: "DM Sans", sans-serif;
-}
-
-body {
   background-color: #ff99e4;
   background-image: radial-gradient(at 83% 54%, #e47f53 0px, transparent 50%), radial-gradient(at 6% 0%, #fbad79 0px, transparent 50%), radial-gradient(at 25% 61%, #f269e7 0px, transparent 50%), radial-gradient(at 68% 10%, #6078f0 0px, transparent 50%);
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 body {
   font-family: "DM Sans", sans-serif;
-}
-
-body {
   background-color: #ff99e4;
   background-image: radial-gradient(at 83% 54%, #e47f53 0px, transparent 50%), radial-gradient(at 6% 0%, #fbad79 0px, transparent 50%), radial-gradient(at 25% 61%, #f269e7 0px, transparent 50%), radial-gradient(at 68% 10%, #6078f0 0px, transparent 50%);
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 h1 {
   font-size: 4rem;
 }
 
-@media screen and (min-width: 768px) and (max-width: 991px) {
+@media screen and (min-width: 768px) and (max-width: 992px) {
   #converter_wrapper {
     flex-direction: column !important;
   }
@@ -35,6 +41,9 @@ main #converter_wrapper select {
   outline: 0;
   color: #f5f5f5;
   background-color: #606060;
+}
+main #converter_wrapper select:nth-of-type(1) {
+  cursor: pointer;
 }
 main #converter_wrapper input {
   outline: 0;

@@ -1,11 +1,14 @@
 body{
     font-family: 'DM Sans', sans-serif;
-}
-body{
     background-color:#ff99e4;
     background-image:
     radial-gradient(at 83% 54%, #e47f53 0px, transparent 50%),
     radial-gradient(at 6% 0%, #fbad79 0px, transparent 50%),
     radial-gradient(at 25% 61%, #f269e7 0px, transparent 50%),
     radial-gradient(at 68% 10%, #6078f0 0px, transparent 50%),
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
 }

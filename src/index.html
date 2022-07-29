@@ -4,7 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>temperature converter</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
@@ -20,16 +24,16 @@
           <div class="row">
             <div class="d-flex flex-column flex-md-row justify-content-center align-items-center fs-3 pt-5" id="converter_wrapper">
               <section class="mx-4 d-flex flex-column"> 
-                <input class="text-center" id="base_unit_input" type="text" placeholder="℃">
+                <input class="text-center" id="base_unit_input" type="number" placeholder="℃">
                 <select class="fs-4" id="base_unit_selection">
                   <option value="Celsius">Celsius</option>
                   <option value="Fahrenheit">Fahrenheit</option>
                 </select>
               </section>
-              <p class="d-flex align-items-center justify-content-center"> <i class="fa-solid fa-equals"></i></p>
+              <p class="d-flex align-items-center justify-content-center mt-3 mt-xl-0" id="equals"> <i class="fa-solid fa-equals"></i></p>
               <section class="mx-4 d-flex flex-column">
                 <input class="text-center" id="result_unit_input" type="text" placeholder="℉">
-                <select class="fs-4" id="result_unit_selection">
+                <select class="fs-4 pe-none user-select-none" id="result_unit_selection">
                   <option value="Fahrenheit">Fahrenheit</option>
                   <option value="Celsius">Celsius</option>
                 </select>
