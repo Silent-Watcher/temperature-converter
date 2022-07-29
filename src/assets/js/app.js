@@ -13,8 +13,8 @@ let resultUnitHeading = $.getElementById('result_unit_heading');
 //
 function convert() {
   if (baseUnit === '℃')
-    resultUnitInput.value = (baseUnitInput.value * 9) / 5 + 32;
-  else resultUnitInput.value = (baseUnitInput.value - 32) * (5 / 9);
+    resultUnitInput.value = ((baseUnitInput.value * 9) / 5 + 32).toFixed(3);
+  else resultUnitInput.value = ((baseUnitInput.value - 32) * (5 / 9)).toFixed(3);
 }
 //
 $.title = `${baseUnit} to ${resultUnit}`;
