@@ -11,6 +11,12 @@ let equals = $.getElementById('equals');
 let baseUnitHeading = $.getElementById('base_unit_heading');
 let resultUnitHeading = $.getElementById('result_unit_heading');
 //
+function convert() {
+  if (baseUnit === '℃')
+    resultUnitInput.value = (baseUnitInput.value * 9) / 5 + 32;
+  else resultUnitInput.value = (baseUnitInput.value - 32) * (5 / 9);
+}
+//
 $.title = `${baseUnit} to ${resultUnit}`;
 //
 // °C to °F
@@ -20,11 +26,7 @@ $.title = `${baseUnit} to ${resultUnit}`;
 baseUnitSelect.addEventListener('change', function () {
   if (this.value === 'Fahrenheit') [baseUnit, resultUnit] = ['℉', '℃'];
   else [baseUnit, resultUnit] = ['℃', '℉'];
-  if (baseUnitInput.value.length !== 0) {
-    if (baseUnit === '℃')
-      resultUnitInput.value = (baseUnitInput.value * 9) / 5 + 32;
-    else resultUnitInput.value = (baseUnitInput.value - 32) * (5 / 9);
-  }
+  if (baseUnitInput.value.length !== 0) convert();
   $.title = `${baseUnit} to ${resultUnit}`;
   baseUnitInput.placeholder = baseUnit;
   resultUnitInput.placeholder = resultUnit;
@@ -38,14 +40,11 @@ baseUnitSelect.addEventListener('change', function () {
 //
 baseUnitInput.addEventListener('keyup', function () {
   if (this.value.length === 0) resultUnitInput.value = '';
-  else {
-    if (baseUnit === '℃')
-      resultUnitInput.value = (baseUnitInput.value * 9) / 5 + 32;
-    else resultUnitInput.value = (baseUnitInput.value - 32) * (5 / 9);
-  }
+  else convert();
 });
-window.addEventListener('resize',function(){
-    if (window.innerWidth <= 992)
-      equals.firstElementChild.classList.replace('fa-equals', 'fa-arrow-down');
-    else equals.firstElementChild.classList.replace('fa-arrow-down', 'fa-equals');
-})
+
+// change equals icon 
+if (window.innerWidth <= 992)
+equals.firstElementChild.classList.replace('fa-equals', 'fa-arrow-down');
+else equals.firstElementChild.classList.replace('fa-arrow-down', 'fa-equals');
+// change equals icon 
