@@ -8,6 +8,8 @@ let baseUnitInput = $.getElementById('base_unit_input');
 let resultUnitInput = $.getElementById('result_unit_input');
 let resultUnitSelection = $.getElementById('result_unit_selection');
 let equals = $.getElementById('equals');
+let baseUnitHeading = $.getElementById('base_unit_heading');
+let resultUnitHeading = $.getElementById('result_unit_heading');
 //
 $.title = `${baseUnit} to ${resultUnit}`;
 //
@@ -26,6 +28,8 @@ baseUnitSelect.addEventListener('change', function () {
   $.title = `${baseUnit} to ${resultUnit}`;
   baseUnitInput.placeholder = baseUnit;
   resultUnitInput.placeholder = resultUnit;
+  baseUnitHeading.innerHTML = baseUnit;
+  resultUnitHeading.innerHTML = resultUnit;
   resultUnitSelection.firstElementChild.innerHTML =
     resultUnit === '℉' ? 'Fahrenheit' : 'Celsius';
   resultUnitSelection.firstElementChild.value =
